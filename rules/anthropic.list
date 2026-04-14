@@ -1,0 +1,39 @@
+# Anthropic / Claude 访问规则集
+# Format : Surge / Mihomo / Loon / Quantumult X 通用文本格式
+# Updated: 2026-04-14
+# Author : kk66615
+
+# === 核心域名 ===
+DOMAIN-SUFFIX,anthropic.com
+DOMAIN-SUFFIX,claude.ai
+DOMAIN-SUFFIX,claude.com
+DOMAIN-SUFFIX,clau.de
+DOMAIN-SUFFIX,claudemcpclient.com
+DOMAIN-SUFFIX,claudeusercontent.com
+
+# === CDN 与基础设施 ===
+DOMAIN,cdn.anthropic.com
+DOMAIN,anthropic.com.cdn.cloudflare.net
+DOMAIN,servd-anthropic-website.b-cdn.net
+
+# === 认证与内容 ===
+DOMAIN,anthropic.auth0.com
+DOMAIN,anthropic-com.ghost.io
+
+# === 监控与反欺诈 (防 IP 漂移触发风控) ===
+DOMAIN-SUFFIX,sentry.io
+DOMAIN-SUFFIX,statsigapi.net
+DOMAIN-SUFFIX,datadoghq.com
+DOMAIN-SUFFIX,datadog.com
+DOMAIN-SUFFIX,siftscience.com
+DOMAIN-SUFFIX,sift.com
+
+# === 第三方组件 / 客服 ===
+DOMAIN-SUFFIX,intercom.io
+DOMAIN-SUFFIX,intercomcdn.com
+DOMAIN,cdn.usefathom.com
+
+# === IP / ASN 兜底 ===
+IP-CIDR,160.79.104.0/21,no-resolve
+IP-CIDR6,2607:6bc0::/32,no-resolve
+IP-ASN,399358,no-resolve

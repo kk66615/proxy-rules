@@ -1,0 +1,45 @@
+# Anthropic / Claude 访问规则集
+# 用途: 将 Anthropic、Claude.ai 及其依赖的 CDN / 风控 / 监控 服务
+#       路由到同一代理出口,避免 IP 漂移触发 Sift / Datadog 风控。
+#
+# 兼容: Mihomo (Clash Meta) / Stash / ClashX Pro
+# 注意: 包含 IP-ASN 规则,经典 Clash Premium 不支持。
+#
+# 维护: kk66615
+# 更新: 2026-04-14
+
+payload:
+  # ============ 核心域名 ============
+  - DOMAIN-SUFFIX,anthropic.com
+  - DOMAIN-SUFFIX,claude.ai
+  - DOMAIN-SUFFIX,claude.com
+  - DOMAIN-SUFFIX,clau.de
+  - DOMAIN-SUFFIX,claudemcpclient.com
+  - DOMAIN-SUFFIX,claudeusercontent.com
+
+  # ============ CDN 与基础设施 ============
+  - DOMAIN,cdn.anthropic.com
+  - DOMAIN,anthropic.com.cdn.cloudflare.net
+  - DOMAIN,servd-anthropic-website.b-cdn.net
+
+  # ============ 认证与内容 ============
+  - DOMAIN,anthropic.auth0.com
+  - DOMAIN,anthropic-com.ghost.io
+
+  # ============ 监控与反欺诈 (必须与主站同出口) ============
+  - DOMAIN-SUFFIX,sentry.io
+  - DOMAIN-SUFFIX,statsigapi.net
+  - DOMAIN-SUFFIX,datadoghq.com
+  - DOMAIN-SUFFIX,datadog.com
+  - DOMAIN-SUFFIX,siftscience.com
+  - DOMAIN-SUFFIX,sift.com
+
+  # ============ 第三方组件 / 客服 ============
+  - DOMAIN-SUFFIX,intercom.io
+  - DOMAIN-SUFFIX,intercomcdn.com
+  - DOMAIN,cdn.usefathom.com
+
+  # ============ IP / ASN 兜底 ============
+  - IP-CIDR,160.79.104.0/21,no-resolve
+  - IP-CIDR6,2607:6bc0::/32,no-resolve
+  - IP-ASN,399358,no-resolve
