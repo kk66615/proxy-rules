@@ -40,5 +40,7 @@ payload:
   - DOMAIN,cdn.usefathom.com
 
   # ============ IP / ASN 兜底 ============
-  - IP-CIDR,129.153.222.153/32,no-resolve
-  - IP-ASN,31898,no-resolve
+  - IP-CIDR,160.79.104.0/23,no-resolve
+  - IP-CIDR,160.79.104.0/21,no-resolve
+  - IP-CIDR6,2607:6bc0::/48,no-resolve
+  - IP-ASN,399358,no-resolve
