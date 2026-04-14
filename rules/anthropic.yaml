@@ -16,6 +16,7 @@ payload:
   - DOMAIN-SUFFIX,clau.de
   - DOMAIN-SUFFIX,claudemcpclient.com
   - DOMAIN-SUFFIX,claudeusercontent.com
+  - DOMAIN-SUFFIX,claude.site
 
   # ============ CDN 与基础设施 ============
   - DOMAIN,cdn.anthropic.com
@@ -25,6 +26,17 @@ payload:
   # ============ 认证与内容 ============
   - DOMAIN,anthropic.auth0.com
   - DOMAIN,anthropic-com.ghost.io
+
+  # ============ 支付 (必须与主站同出口) ============
+  - DOMAIN-SUFFIX,stripe.com
+  - DOMAIN-SUFFIX,stripe.network
+
+  # ============ Cloudflare 验证 ============
+  - DOMAIN,challenges.cloudflare.com
+
+  # ============ Feature Flags ============
+  - DOMAIN-SUFFIX,featuregates.org
+  - DOMAIN-SUFFIX,launchdarkly.com
 
   # ============ 监控与反欺诈 (必须与主站同出口) ============
   - DOMAIN-SUFFIX,sentry.io

@@ -50,4 +50,7 @@ https://raw.githubusercontent.com/kk66615/proxy-rules/main/rules/anthropic.list,
 2. `IP-ASN` 规则仅 Mihomo / Surge 支持,经典 Clash 请删除该行。
 3. 监控/风控相关域名 (Sentry / Datadog / Sift / Statsig) 一旦放过直连,
    会立刻触发账号风险检测,**勿改**。
-4. 规则更新周期建议 1 天,Anthropic 偶尔会调整 CDN 后端。
+4. Stripe 支付域名**必须**与主站同出口,否则订阅/付款时 IP 不一致会触发风控。
+5. `sentry.io`、`stripe.com` 等域名被广泛使用,
+   本规则会将所有网站对这些服务的请求也路由至代理,属正常取舍。
+6. 规则更新周期建议 1 天,Anthropic 偶尔会调整 CDN 后端。
