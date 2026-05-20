@@ -1,6 +1,6 @@
 # Anthropic / Claude 访问规则集
 # Format : Surge / Mihomo / Loon / Quantumult X 通用文本格式
-# Updated: 2026-04-14
+# Updated: 2026-05-21
 # Author : kk66615
 
 # === 核心域名 ===
@@ -9,6 +9,7 @@ DOMAIN-SUFFIX,claude.ai
 DOMAIN-SUFFIX,claude.com
 DOMAIN-SUFFIX,clau.de
 DOMAIN-SUFFIX,claudemcpclient.com
+DOMAIN-SUFFIX,claudemcpcontent.com
 DOMAIN-SUFFIX,claudeusercontent.com
 DOMAIN-SUFFIX,claude.site
 
@@ -44,6 +45,15 @@ DOMAIN-SUFFIX,sift.com
 DOMAIN-SUFFIX,intercom.io
 DOMAIN-SUFFIX,intercomcdn.com
 DOMAIN,cdn.usefathom.com
+
+# === 系统时区 / NTP (与主站同出口,防时区漂移戳穿) ===
+DOMAIN-SUFFIX,ntp.org
+DOMAIN-SUFFIX,time.apple.com
+DOMAIN-SUFFIX,time.windows.com
+DOMAIN-SUFFIX,time.android.com
+DOMAIN-SUFFIX,time.google.com
+DOMAIN-SUFFIX,time.cloudflare.com
+DOMAIN-SUFFIX,time.facebook.com
 
 # === IP / ASN 兜底 ===
 IP-CIDR,160.79.104.0/23,no-resolve
