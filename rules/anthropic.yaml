@@ -6,7 +6,7 @@
 # 注意: 包含 IP-ASN 规则,经典 Clash Premium 不支持。
 #
 # 维护: kk66615
-# 更新: 2026-04-14
+# 更新: 2026-05-21
 
 payload:
   # ============ 核心域名 ============
@@ -15,6 +15,7 @@ payload:
   - DOMAIN-SUFFIX,claude.com
   - DOMAIN-SUFFIX,clau.de
   - DOMAIN-SUFFIX,claudemcpclient.com
+  - DOMAIN-SUFFIX,claudemcpcontent.com
   - DOMAIN-SUFFIX,claudeusercontent.com
   - DOMAIN-SUFFIX,claude.site
 
@@ -50,6 +51,15 @@ payload:
   - DOMAIN-SUFFIX,intercom.io
   - DOMAIN-SUFFIX,intercomcdn.com
   - DOMAIN,cdn.usefathom.com
+
+  # ============ 系统时区 / NTP (与主站同出口,防时区漂移戳穿) ============
+  - DOMAIN-SUFFIX,ntp.org
+  - DOMAIN-SUFFIX,time.apple.com
+  - DOMAIN-SUFFIX,time.windows.com
+  - DOMAIN-SUFFIX,time.android.com
+  - DOMAIN-SUFFIX,time.google.com
+  - DOMAIN-SUFFIX,time.cloudflare.com
+  - DOMAIN-SUFFIX,time.facebook.com
 
   # ============ IP / ASN 兜底 ============
   - IP-CIDR,160.79.104.0/23,no-resolve
